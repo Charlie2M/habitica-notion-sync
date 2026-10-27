@@ -1,0 +1,22 @@
+# Maps Habitica tasks to Notion columns by task ID (names can change, IDs don't).
+# Run `hns discover` to list your dailies and habits with their IDs.
+
+timezone: America/El_Salvador
+day_start_hour: 4
+gym_streak_task: "<id-daily-gym>"
+
+dailies:
+  "<id-gym>": Gym
+  "<id-caminata>": Caminata
+  "<id-postura>": Postura
+  "<id-comer-el-plan>": Comer el plan
+  "<id-agua>": Agua
+  "<id-despertar>": Despertar 6:00
+  "<id-corte-de-juegos>": Corte de juegos
+  "<id-dormir>": Dormir 22:30
+  "<id-busqueda-de-empleo>": Búsqueda de empleo
+  "<id-proyecto-personal>": Proyecto personal
+
+habits:
+  # Positive clicks of this habit on the day go to the "Aplicaciones" column
+  applications: "<id-habit-aplique-a-un-trabajo>"
