@@ -3,6 +3,8 @@ name = "habitica-notion-sync"
 version = "0.1.0"
 description = "Daily sync of Habitica stats (dailies, habits, level, health, gold, streaks) into a Notion database."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     { name = "Charlie2M", email = "212143584+Charlie2M@users.noreply.github.com" }
 ]
