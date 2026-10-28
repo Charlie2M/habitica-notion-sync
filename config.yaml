@@ -3,20 +3,21 @@
 
 timezone: America/El_Salvador
 day_start_hour: 4
-gym_streak_task: "<id-daily-gym>"
+gym_streak_task: "355ba430-d3b5-49d5-906c-efdf4920f03c"
 
+# Dailies not listed here still count towards "Cumplidas" and "Programadas".
+# "Dormir 22:30" has no Habitica daily yet, so its column stays empty.
 dailies:
-  "<id-gym>": Gym
-  "<id-caminata>": Caminata
-  "<id-postura>": Postura
-  "<id-comer-el-plan>": Comer el plan
-  "<id-agua>": Agua
-  "<id-despertar>": Despertar 6:00
-  "<id-corte-de-juegos>": Corte de juegos
-  "<id-dormir>": Dormir 22:30
-  "<id-busqueda-de-empleo>": Búsqueda de empleo
-  "<id-proyecto-personal>": Proyecto personal
+  "355ba430-d3b5-49d5-906c-efdf4920f03c": Gym
+  "389b5182-b6e6-4b75-a5d2-584bee6093e5": Caminata
+  "acd1223f-5a16-4dee-bff3-524f5590dd05": Postura
+  "78e52547-f460-426a-878d-6d2c7f341040": Comer el plan
+  "8f011e89-0e39-467c-8128-ea2c15b16bec": Agua
+  "07f82533-a931-4b50-bff8-e0d3cc15cdbe": Despertar 6:00
+  "a7db6923-838f-4a28-aa35-e770b7c12d0e": Corte de juegos
+  "1337901c-b23d-422a-adab-97d321cd8acc": Búsqueda de empleo
+  "6f8d4229-a693-432d-b431-44fe27d64fff": Proyecto personal
 
 habits:
   # Positive clicks of this habit on the day go to the "Aplicaciones" column
-  applications: "<id-habit-aplique-a-un-trabajo>"
+  applications: "5483dcf2-d7eb-4462-aa9a-6ce923b51abb"
