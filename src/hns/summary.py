@@ -190,6 +190,24 @@ def summarize_day(day: date, user: User, tasks: Tasks, config: SyncConfig) -> Da
     return summarize_days([day], user, tasks, config)[0]
 
 
+def day_settings_mismatches(user: User, config: SyncConfig) -> list[str]:
+    """Differences between Habitica's day settings and config.yaml, as readable messages."""
+    problems = []
+    if user.preferences.day_start != config.day_start_hour:
+        problems.append(
+            f"Habitica's custom day start is {user.preferences.day_start}:00 "
+            f"but config.yaml has day_start_hour: {config.day_start_hour}"
+        )
+    offset = user.last_cron.astimezone(config.tz).utcoffset()
+    config_offset_minutes = -int(offset.total_seconds() // 60) if offset is not None else 0
+    if user.preferences.timezone_offset != config_offset_minutes:
+        problems.append(
+            f"Habitica's timezone offset is {user.preferences.timezone_offset} min "
+            f"but config.yaml's {config.timezone} is {config_offset_minutes} min"
+        )
+    return problems
+
+
 def latest_closed_days(user: User, config: SyncConfig, count: int = 3) -> list[date]:
     """The `count` most recent days already closed by a cron, oldest first."""
     open_day = DayClock(config.tz, config.day_start_hour).day_of(user.last_cron)

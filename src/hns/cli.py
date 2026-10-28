@@ -5,19 +5,45 @@ import json
 import logging
 import sys
 from collections.abc import Sequence
+from datetime import date
 from pathlib import Path
 from typing import Any
 
 from dotenv import load_dotenv
+from notion_client import Client
+from pydantic import ValidationError
 
 from hns import __version__
-from hns.config import ConfigError, load_habitica_credentials
+from hns.config import (
+    DEFAULT_CONFIG_PATH,
+    ConfigError,
+    HabiticaCredentials,
+    load_habitica_credentials,
+    load_notion_settings,
+    load_sync_config,
+)
 from hns.habitica import HabiticaClient, HabiticaError
+from hns.models import Tasks, User
+from hns.notion_sync import (
+    NotionError,
+    NotionSync,
+    build_properties,
+    day_title,
+    describe_properties,
+    expected_schema,
+)
+from hns.summary import day_settings_mismatches, latest_closed_days, summarize_days
 
 logger = logging.getLogger(__name__)
 
 DUMP_DIR = Path("local")
 DISCOVER_TASK_TYPES = (("daily", "Dailies"), ("habit", "Habits"))
+# Re-syncing a few closed days lets a late check-off or a missed run fix itself.
+SYNC_DAYS = 3
+
+
+class UsageError(Exception):
+    """Raised when the command-line arguments can't be honored."""
 
 
 def format_task_list(tasks: Sequence[dict[str, Any]]) -> str:
@@ -54,6 +80,68 @@ def run_discover(args: argparse.Namespace) -> int:
     return 0
 
 
+def fetch_habitica(credentials: HabiticaCredentials) -> tuple[User, Tasks]:
+    with HabiticaClient(credentials) as client:
+        raw_tasks = client.get_tasks()
+        raw_user = client.get_user()
+    try:
+        return User.model_validate(raw_user), Tasks.from_api(raw_tasks)
+    except ValidationError as exc:
+        raise HabiticaError(f"Unexpected Habitica response: {exc}") from exc
+
+
+def days_to_sync(requested: date | None, closed_days: list[date]) -> list[date]:
+    if requested is None:
+        return closed_days
+    if requested > closed_days[-1]:
+        raise UsageError(
+            f"{requested} is not closed yet; the latest closed day is {closed_days[-1]}. "
+            "Habitica closes a day when its cron runs (when you open the app the next day)."
+        )
+    return [requested]
+
+
+def run_sync(args: argparse.Namespace) -> int:
+    config = load_sync_config(args.config)
+    credentials = load_habitica_credentials()
+    # Load Notion settings before the slow Habitica calls so a missing secret fails fast.
+    notion_settings = None if args.dry_run else load_notion_settings()
+
+    user, tasks = fetch_habitica(credentials)
+    for problem in day_settings_mismatches(user, config):
+        logger.warning("%s", problem)
+
+    closed_days = latest_closed_days(user, config, SYNC_DAYS)
+    newest_closed = closed_days[-1]
+    columns = list(config.dailies.values())
+    rows = [
+        # Level, health, gold and streak are "as of now", so only the newest day gets them.
+        (
+            summary.day,
+            build_properties(summary, columns, include_stats=summary.day == newest_closed),
+        )
+        for summary in summarize_days(days_to_sync(args.date, closed_days), user, tasks, config)
+    ]
+
+    if notion_settings is None:
+        for day, properties in rows:
+            print(f"{day_title(day)} ({day})")
+            for line in describe_properties(properties):
+                print(f"  {line}")
+        print("Dry run: nothing was written to Notion.")
+        return 0
+
+    with Client(
+        auth=notion_settings.token.get_secret_value(), logger=logging.getLogger("notion_client")
+    ) as notion:
+        sync = NotionSync(notion, notion_settings.data_source_id)
+        sync.check_schema(expected_schema(columns))
+        for day, properties in rows:
+            action = sync.upsert(day, properties)
+            print(f"{action.capitalize()} {day_title(day)} ({day})")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="hns",
@@ -72,6 +160,26 @@ def build_parser() -> argparse.ArgumentParser:
         help=f"also save the raw user and tasks JSON in {DUMP_DIR}/",
     )
     discover.set_defaults(handler=run_discover)
+
+    sync = subparsers.add_parser(
+        "sync", help=f"summarize the last {SYNC_DAYS} closed days and upsert them into Notion"
+    )
+    sync.add_argument(
+        "--date",
+        type=date.fromisoformat,
+        metavar="YYYY-MM-DD",
+        help="sync only this day (must already be closed by Habitica's cron)",
+    )
+    sync.add_argument(
+        "--dry-run", action="store_true", help="print what would be written instead of writing"
+    )
+    sync.add_argument(
+        "--config",
+        type=Path,
+        default=DEFAULT_CONFIG_PATH,
+        help=f"path to the task mapping (default: {DEFAULT_CONFIG_PATH})",
+    )
+    sync.set_defaults(handler=run_sync)
     return parser
 
 
@@ -100,6 +208,6 @@ def main(argv: Sequence[str] | None = None) -> int:
     load_dotenv()
     try:
         return args.handler(args)
-    except (ConfigError, HabiticaError) as exc:
+    except (ConfigError, HabiticaError, NotionError, UsageError) as exc:
         logger.error("%s", exc)
         return 1
