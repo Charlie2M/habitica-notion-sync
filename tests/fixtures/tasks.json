@@ -1,0 +1,918 @@
+[
+  {
+    "id": "00000000-0000-4000-8000-000000000001",
+    "type": "habit",
+    "text": "Avance en un proyecto fuera de la hora fija",
+    "history": []
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000002",
+    "type": "habit",
+    "text": "Contacte a alguien de la industria ",
+    "history": []
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000003",
+    "type": "habit",
+    "text": "Aplique a un trabajo",
+    "history": [
+      {
+        "date": 1792639115516,
+        "value": 1,
+        "scoredUp": 1,
+        "scoredDown": 0
+      },
+      {
+        "date": 1792720844410,
+        "value": 1.48726896031426,
+        "scoredUp": 1,
+        "scoredDown": 0
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000004",
+    "type": "habit",
+    "text": "MSTB",
+    "history": [
+      {
+        "date": 1792425427054,
+        "value": -1.026657310999762,
+        "scoredUp": 0,
+        "scoredDown": 1
+      },
+      {
+        "date": 1792547380140,
+        "value": 4.7248694068358077e-07,
+        "scoredUp": 1,
+        "scoredDown": 0
+      },
+      {
+        "date": 1792603055862,
+        "value": -1.0266568257464832,
+        "scoredUp": 0,
+        "scoredDown": 1
+      },
+      {
+        "date": 1792720856066,
+        "value": -2.081442497642733,
+        "scoredUp": 0,
+        "scoredDown": 1
+      },
+      {
+        "date": 1792867286423,
+        "value": -1.026656285493036,
+        "scoredUp": 1,
+        "scoredDown": 0
+      },
+      {
+        "date": 1792983093364,
+        "value": -2.081441942380888,
+        "scoredUp": 0,
+        "scoredDown": 1
+      },
+      {
+        "date": 1793193916300,
+        "value": -1.0266557452396265,
+        "scoredUp": 1,
+        "scoredDown": 0
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000005",
+    "type": "habit",
+    "text": "Jugar despues de las 22:00",
+    "history": []
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000006",
+    "type": "habit",
+    "text": "Comida fuera del plan ",
+    "history": [
+      {
+        "date": 1792867291150,
+        "value": -1.026657310999762,
+        "scoredUp": 0,
+        "scoredDown": 1
+      },
+      {
+        "date": 1792983096606,
+        "value": -1.5539525155173857,
+        "scoredUp": 0,
+        "scoredDown": 1
+      },
+      {
+        "date": 1793113475673,
+        "value": -1.4256974896788595,
+        "scoredUp": 0,
+        "scoredDown": 1
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000007",
+    "type": "habit",
+    "text": "Dije que no a comida fuera del plan",
+    "history": [
+      {
+        "date": 1792639123391,
+        "value": 1,
+        "scoredUp": 1,
+        "scoredDown": 0
+      },
+      {
+        "date": 1793193918995,
+        "value": 1,
+        "scoredUp": 1,
+        "scoredDown": 0
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000008",
+    "type": "habit",
+    "text": "Me levante con la alarma de postura",
+    "history": []
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000009",
+    "type": "habit",
+    "text": "Caminata extra",
+    "history": []
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000010",
+    "type": "daily",
+    "text": "Despertar a las 6",
+    "streak": 9,
+    "isDue": true,
+    "completed": true,
+    "history": [
+      {
+        "date": 1792411079877,
+        "value": 1,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792499618706,
+        "value": 1.9747,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792584463739,
+        "value": 2.9253562257358428,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792668057459,
+        "value": 3.853133245658556,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792755171726,
+        "value": 4.759112700885761,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792843896696,
+        "value": 5.6443010177121415,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793016672103,
+        "value": 5.6443010177121415,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793017392465,
+        "value": 6.5096362419810205,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793102052606,
+        "value": 7.355994112832055,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793188312440,
+        "value": 8.184193475367,
+        "isDue": true,
+        "completed": true
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000011",
+    "type": "daily",
+    "text": "GYM",
+    "streak": 7,
+    "isDue": true,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792420309327,
+        "value": 1.000000414687937,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792505022501,
+        "value": 1.9747004043301848,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792603039592,
+        "value": 2.925356620216105,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792755168822,
+        "value": 2.925356620216105,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792773469085,
+        "value": 3.853133630760131,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792867264188,
+        "value": 4.759113077046734,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793016672098,
+        "value": 4.759113077046734,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793025396699,
+        "value": 5.6443013853404915,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793151891386,
+        "value": 6.509636601457326,
+        "isDue": true,
+        "completed": true
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000012",
+    "type": "daily",
+    "text": "Comer el plan",
+    "streak": 0,
+    "isDue": true,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792469134733,
+        "value": 1,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792547364125,
+        "value": 1.9747,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792639107858,
+        "value": 2.9253562257358428,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792720835035,
+        "value": 3.853133245658556,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792812267170,
+        "value": 4.759112700885761,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792930680138,
+        "value": 4.31651854247257,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1792988968731,
+        "value": 5.211803564047467,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793070568637,
+        "value": 6.086782627393378,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793188309622,
+        "value": 5.87288793983603,
+        "isDue": true,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000013",
+    "type": "daily",
+    "text": "3 Litros de Agua",
+    "streak": 9,
+    "isDue": true,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792471100503,
+        "value": 1,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792547366401,
+        "value": 1.9747,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792639108896,
+        "value": 2.9253562257358428,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792720861797,
+        "value": 3.853133245658556,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792812267952,
+        "value": 4.759112700885761,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792930679897,
+        "value": 5.6443010177121415,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792988969733,
+        "value": 6.5096362419810205,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793070569346,
+        "value": 7.355994112832055,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793188309352,
+        "value": 8.184193475367,
+        "isDue": true,
+        "completed": true
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000014",
+    "type": "daily",
+    "text": "Proyectos personales",
+    "streak": 5,
+    "isDue": true,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792450974326,
+        "value": 1.000000414687937,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792584457121,
+        "value": 0.025300425045689412,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1792639110295,
+        "value": 1.0246522979235748,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792720839727,
+        "value": 1.9987367464743953,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792812271048,
+        "value": 2.948807591255189,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792930680142,
+        "value": 2.948807591255189,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793016672106,
+        "value": 2.948807591255189,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793070572132,
+        "value": 3.8760272272862837,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793151894613,
+        "value": 4.781475326687163,
+        "isDue": true,
+        "completed": true
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000015",
+    "type": "daily",
+    "text": "Busqueda de empleo",
+    "streak": 0,
+    "isDue": true,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792450958167,
+        "value": 1,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792584457121,
+        "value": 0.02529999999999999,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1792639110982,
+        "value": 1.0246518837628547,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792720838489,
+        "value": 1.9987363426517264,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792782577035,
+        "value": 2.9488071972640215,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792930680142,
+        "value": 2.9488071972640215,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793016672105,
+        "value": 2.9488071972640215,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793102044159,
+        "value": 2.0215875518714954,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1793188309628,
+        "value": 1.0720728719060104,
+        "isDue": true,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000016",
+    "type": "daily",
+    "text": "Rutina de postura ",
+    "streak": 1,
+    "isDue": true,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792499611708,
+        "value": -1,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1792584457114,
+        "value": -2.025956704627065,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1792668046398,
+        "value": -3.0792442306676366,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1792755168824,
+        "value": -4.161348258391508,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1792843894702,
+        "value": -5.2738783997395196,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1792930680137,
+        "value": -6.418582324043852,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1793016672100,
+        "value": -6.418582324043852,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793102044151,
+        "value": -7.597361948942557,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1793188309355,
+        "value": -6.3824318291637425,
+        "isDue": true,
+        "completed": true
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000017",
+    "type": "daily",
+    "text": "Corte de juegos/actividades",
+    "streak": 3,
+    "isDue": true,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792469141347,
+        "value": 1,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792547371297,
+        "value": 1.9747,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792639112816,
+        "value": 2.9253562257358428,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792728259575,
+        "value": 3.853133245658556,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792812272733,
+        "value": 4.759112700885761,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792930680140,
+        "value": 3.8739243840593804,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1792988970437,
+        "value": 4.779421276212302,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793070574460,
+        "value": 5.664149044631875,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793188309361,
+        "value": 6.529044256984443,
+        "isDue": true,
+        "completed": true
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000018",
+    "type": "daily",
+    "text": "Pesarme ",
+    "streak": 2,
+    "isDue": false,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792450962381,
+        "value": 1,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792584457117,
+        "value": 1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792668046403,
+        "value": 1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792755168827,
+        "value": 1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792843894706,
+        "value": 1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792930680141,
+        "value": 1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793016672104,
+        "value": 1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793025402531,
+        "value": 1.9747,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1793188309627,
+        "value": 1.9747,
+        "isDue": false,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000019",
+    "type": "daily",
+    "text": "Tomar fotos",
+    "streak": 0,
+    "isDue": false,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792499611710,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792584457119,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792668046404,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792755168827,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792843894706,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792930680141,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793016672105,
+        "value": -1,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1793102044156,
+        "value": -1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793188309627,
+        "value": -1,
+        "isDue": false,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000020",
+    "type": "daily",
+    "text": "Cocinar Pollo",
+    "streak": 0,
+    "isDue": true,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792499611709,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792584457115,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792603047197,
+        "value": 1,
+        "isDue": true,
+        "completed": true
+      },
+      {
+        "date": 1792755168826,
+        "value": 1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792843894705,
+        "value": 1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792930680139,
+        "value": 1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793016672102,
+        "value": 0.02529999999999999,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1793102044154,
+        "value": 0.02529999999999999,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793188309624,
+        "value": 0.02529999999999999,
+        "isDue": false,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000021",
+    "type": "daily",
+    "text": "Caminata",
+    "streak": 0,
+    "isDue": false,
+    "completed": false,
+    "history": [
+      {
+        "date": 1792499611707,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792584457113,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792668046396,
+        "value": 0,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792755168823,
+        "value": -1,
+        "isDue": true,
+        "completed": false
+      },
+      {
+        "date": 1792843894702,
+        "value": -1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1792930680136,
+        "value": -1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793016672099,
+        "value": -1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793102044150,
+        "value": -1,
+        "isDue": false,
+        "completed": false
+      },
+      {
+        "date": 1793188309621,
+        "value": -1,
+        "isDue": false,
+        "completed": false
+      }
+    ]
+  }
+]

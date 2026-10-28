@@ -1,0 +1,13 @@
+{
+  "stats": {
+    "lvl": 6,
+    "hp": 39,
+    "gp": 187,
+    "exp": 161
+  },
+  "preferences": {
+    "dayStart": 4,
+    "timezoneOffset": 360
+  },
+  "lastCron": "2026-10-28T11:51:49.592Z"
+}
