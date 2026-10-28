@@ -42,6 +42,21 @@ def load_habitica_credentials(env: Mapping[str, str] | None = None) -> HabiticaC
     )
 
 
+class NotionSettings(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
+    token: SecretStr
+    data_source_id: str
+
+
+def load_notion_settings(env: Mapping[str, str] | None = None) -> NotionSettings:
+    values = _require(os.environ if env is None else env, "NOTION_TOKEN", "NOTION_DATA_SOURCE_ID")
+    return NotionSettings(
+        token=SecretStr(values["NOTION_TOKEN"]),
+        data_source_id=values["NOTION_DATA_SOURCE_ID"],
+    )
+
+
 def _is_placeholder(task_id: str) -> bool:
     return task_id.startswith("<")
 
